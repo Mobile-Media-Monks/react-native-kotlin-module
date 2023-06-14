@@ -12,5 +12,6 @@ module.exports = {
     'no-undef': 0,
     'no-use-before-define': 0,
     'no-underscore-dangle': 0,
+    'react/react-in-jsx-scope': 0,
   },
 };

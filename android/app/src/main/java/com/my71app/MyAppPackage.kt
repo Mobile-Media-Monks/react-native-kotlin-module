@@ -4,14 +4,17 @@ import android.view.View
 import com.facebook.react.ReactPackage
 import com.facebook.react.bridge.NativeModule
 import com.facebook.react.bridge.ReactApplicationContext
-import com.facebook.react.uimanager.SimpleViewManager
+import com.facebook.react.uimanager.BaseViewManager
+import com.facebook.react.uimanager.LayoutShadowNode
+import com.my71app.CustomViewV1.CustomView
+import com.my71app.YoutubeV2.MyViewManager
 
 class MyAppPackage : ReactPackage {
 
     override fun createViewManagers(
         reactContext: ReactApplicationContext
-    ): MutableList<SimpleViewManager<out View>> =
-        mutableListOf(YoutubeView(reactContext), CustomView())
+    ): MutableList<BaseViewManager<out View, LayoutShadowNode>> =
+        mutableListOf(MyViewManager(reactContext), CustomView())
 
     override fun createNativeModules(
         reactContext: ReactApplicationContext

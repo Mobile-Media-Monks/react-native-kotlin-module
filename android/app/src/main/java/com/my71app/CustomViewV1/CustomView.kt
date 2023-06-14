@@ -1,4 +1,4 @@
-package com.my71app
+package com.my71app.CustomViewV1
 
 import android.graphics.Color
 import android.view.Gravity
@@ -44,4 +44,10 @@ class CustomView : SimpleViewManager<View>() {
         }
     }
 
+    override fun onDropViewInstance(view: View) {
+        if (view is TextView) {
+            view.text = null
+        }
+        super.onDropViewInstance(view)
+    }
 }
